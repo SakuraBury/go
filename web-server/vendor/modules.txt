@@ -10,6 +10,7 @@ common/response
 # github.com/beego/beego/v2 v2.0.1
 ## explicit; go 1.14
 github.com/beego/beego/v2
+github.com/beego/beego/v2/adapter/context
 github.com/beego/beego/v2/core/admin
 github.com/beego/beego/v2/core/config
 github.com/beego/beego/v2/core/logs

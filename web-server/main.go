@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/beego/beego/v2/core/logs"
+	"open-center/filter"
 	_ "open-center/routers"
 
 	beego "github.com/beego/beego/v2/server/web"
@@ -14,5 +15,6 @@ func main() {
 		beego.BConfig.WebConfig.DirectoryIndex = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
 	}
+	beego.InsertFilter("*", beego.BeforeRouter, filter.AuthFilter)
 	beego.Run()
 }
